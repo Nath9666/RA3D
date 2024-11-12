@@ -1,4 +1,4 @@
-function Project3DModel(frame, K, R_opt, T_opt, cube3d)
+function h= Project3DModel(frame, K, R_opt, T_opt, cube3d)
     % Assurez-vous que R_opt est une matrice 3x3
     if size(R_opt, 2) == 2
         R_opt = [R_opt, cross(R_opt(:,1), R_opt(:,2))];
@@ -16,8 +16,8 @@ function Project3DModel(frame, K, R_opt, T_opt, cube3d)
     c_3d = c_3d ./ c_3d(3, :);
     
     % Afficher les points projetés
-    figure;
-    imshow(frame);
+    h = frame;
+    imshow(h);
     hold on;
     plot(c_3d(1, :), c_3d(2, :), 'r*');
     
@@ -33,4 +33,6 @@ function Project3DModel(frame, K, R_opt, T_opt, cube3d)
     end
     
     hold off;
+    frame = getframe(gca);
+    h = frame.cdata;
 end
