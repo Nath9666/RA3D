@@ -209,29 +209,3 @@ end
 % Libérer les ressources du lecteur vidéo
 release(videoPlayer);
 ```
-
-### Explication du Code
-
-#### 1. **Chargement et affichage de la vidéo**
-
-Nous chargeons la vidéo `box_video_data.avi` à l'aide de la fonction `VideoReader`. Le lecteur vidéo `vision.VideoPlayer` est utilisé pour afficher les cadres avec les points suivis.
-
-#### 2. **Sélection des coins de la boîte**
-
-Nous utilisons l'outil `imrect` pour permettre à l'utilisateur de sélectionner une région rectangulaire (la boîte) dans la première image. Les coordonnées de la boîte sont récupérées et les coins de cette boîte sont utilisés comme points de suivi.
-
-#### 3. **Initialisation du `PointTracker`**
-
-Nous initialisons l'objet `vision.PointTracker` avec les 4 coins sélectionnés comme points à suivre. Ces points sont suivis dans les cadres suivants de la vidéo.
-
-#### 4. **Suivi des points dans les cadres suivants**
-
-Dans une boucle, nous lisons chaque nouveau cadre de la vidéo et utilisons le tracker pour suivre les points sélectionnés. Les points suivis sont ensuite affichés sur chaque image avec des marqueurs "+" via la fonction `insertMarker`.
-
-#### 5. **Affichage et suivi**
-
-À chaque itération, les nouveaux points suivis sont insérés dans l'image et affichés. Les points sont ensuite mis à jour pour le suivi des cadres suivants.
-
-### Conclusion
-
-Ce code permet de réaliser un suivi 2D-2D des 4 coins de la boîte dans la séquence vidéo `box_video_data.avi`. Vous pouvez utiliser ce suivi pour des applications de vision par ordinateur comme l'alignement d'objets, le suivi de mouvements ou la reconstruction 3D.
