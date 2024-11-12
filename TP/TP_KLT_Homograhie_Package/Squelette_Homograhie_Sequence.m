@@ -46,7 +46,7 @@ imshow(objectFrame);
 
 %%
 %% Définir les points d'intérêts à suivre dans la séquence vidéo
-%% TODO
+points = detectMinEigenFeatures(rgb2gray(objectFrame),'ROI',objectRegion);
 %%
 
 
