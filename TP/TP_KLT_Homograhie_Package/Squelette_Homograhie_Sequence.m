@@ -46,41 +46,48 @@ imshow(objectFrame);
 
 %%
 %% Définir les points d'intérêts à suivre dans la séquence vidéo
-points = detectMinEigenFeatures(rgb2gray(objectFrame),'ROI',objectRegion);
-%%
+points = detectHarrisFeatures(rgb2gray(objectFrame));
 
-
- 
 %% Afficher les points .
-%% TODO
-%%
-
+pointImage = insertMarker(objectFrame,points.Location,'+','Color','white');
 
 %% Create a tracker object.
-%%
 tracker = vision.PointTracker('MaxBidirectionalError',1);
 
 %% Initialize the tracker.
-%% initialize(tracker,points.Location,objectFrame);
-%%
-
-initialize(tracker,points,objectFrame);
+initialize(tracker,points.Location,objectFrame);
 
 %% Read, track, display points, and results in each video frame.
-%%
-
 while hasFrame(videoReader)
-      
-    %% TODO
-    %%
-    
     % 1- Lire la frame courante
+    frame = readFrame(videoReader);
+    
     % 2- Extraire les 4 coins de la cible en utilsant le KLT.
-    % 3- Calculer  l'homographie H, en utilsant la fonction ComputeH.m   
-    % 4- Extaraire les paramètres de la pose 3D à partir de l'homographie H
+    [points, validity] = tracker(frame);
+    visiblePoints = points(validity, :);
+    
+    % Assurez-vous que nous avons au moins 4 points valides
+    if size(visiblePoints, 1) < 4
+        continue;
+    end
+    
+    % 3- Calculer l'homographie H, en utilsant la fonction ComputeH.m   
+    H = ComputeH(p3d, visiblePoints(1:4, :));
+    
+    % 4- Extraire les paramètres de la pose 3D à partir de l'homographie H
     %    (voir formules du cours)
-    % 5- Calculer la Matrice de projection  globale
+    [R_opt, T_opt] = DecomposeHomography(K, H);
+    
+    % 5- Calculer la Matrice de projection globale
+    P = K * [R_opt T_opt];
+    
     % 6- Projeter le cube dans l'image courante en utilsant la foction
     %    Project3DModel.m
-    % 7- Sauvegarder l'image augmentée    
+    Project3DModel(frame, K, R_opt, T_opt, cube3d);
+    
+    % 7- Sauvegarder l'image augmentée
+    % (Vous pouvez utiliser imwrite pour sauvegarder les images si nécessaire)
+    %videoPlayer(h); % Afficher l'image augmentée
 end
+
+%release(videoPlayer);
