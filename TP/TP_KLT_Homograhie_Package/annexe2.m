@@ -24,7 +24,10 @@ title('Red box shows object region');
 %%
 % Detect interest points in the object region.
 %%
-points = detectMinEigenFeatures(rgb2gray(objectFrame),'ROI',objectRegion);
+%%points = detectMinEigenFeatures(rgb2gray(objectFrame),'ROI',objectRegion);
+%%points = detectHarrisFeatures(rgb2gray(objectFrame),'ROI',objectRegion);
+points = detectSURFFeatures(rgb2gray(objectFrame),'ROI',objectRegion);
+%%points = detectORBFeatures(rgb2gray(objectFrame),'ROI',objectRegion);
 %%
 % Display the detected points.
 %%

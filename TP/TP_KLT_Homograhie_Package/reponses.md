@@ -47,6 +47,32 @@ points = detectMinEigenFeatures(rgb2gray(objectFrame), 'ROI', objectRegion);
 
 ## b) Remplacer cette  fonction  par  les détecteurs  suivants:  Harris,  Surf  et Orb. Exécuter à chaque fois le code et comparer les résultats
 
+### MinEigen
+
+![Logo GitHub](./images/meinEigen.png)
+
+### Harris
+
+![Logo GitHub](./images/harrys2.png)
+
+### Surf
+
+![Logo GitHub](./images/surf2.png)
+
+### Orb
+
+![Logo GitHub](./images/orb2.png)
+
+### Comparaison des Résultats
+
+- **MinEigen** : Les points détectés semblent être principalement des coins et des régions avec des changements d'intensité significatifs.
+- **Harris** : Les points détectés sont également des coins, mais la distribution et la densité des points peuvent varier par rapport à MinEigen.
+- **SURF** : Les points détectés par SURF sont plus nombreux et peuvent inclure des régions non strictement des coins, mais des régions de texture ou de structure intéressantes.
+- **ORB** : Les points détectés par ORB sont également nombreux et peuvent inclure des coins, des régions de texture et des régions de structure, mais avec une sensibilité différente par rapport à SURF.
+
+Chaque détecteur a ses propres avantages et inconvénients en fonction du type d'application et des caractéristiques de l'image. Par exemple, SURF et ORB sont souvent utilisés pour des tâches de correspondance d'images, tandis que Harris et MinEigen sont plus adaptés à la détection de coins précis.
+Pour une image comme la notre, d'un visage avec des coins bien définis, MinEigen et Harris semblent être des choix appropriés, tandis que SURF et ORB peuvent être plus utiles pour des images avec des textures complexes ou des structures non linéaires.
+
 ## c) Expliquer les différents étapes d'utilisation de la fonction vision.PointTracker (création, initialisation et tracking)
 
 La fonction `vision.PointTracker` de MATLAB fait partie de la **Computer Vision Toolbox** et permet de suivre des points caractéristiques d’une image à l’autre dans une séquence vidéo ou un flux d’images. Voici les différentes étapes d'utilisation de cette fonction pour le suivi de points dans un flux vidéo : **création**, **initialisation**, et **suivi** des points caractéristiques.
