@@ -2,8 +2,6 @@
 
 ## a) Quelle  est  la  fonction Matlab  utilisée pour  la  détection  des  points  caractéristiques  dans  la région d'intérêt. Expliquer son principe.
 
-Dans ce code, la fonction MATLAB utilisée pour détecter les points caractéristiques dans la région d'intérêt est :
-
 ### **`detectMinEigenFeatures`**
 
 Cette fonction fait partie de la boîte à outils **Computer Vision Toolbox** de MATLAB. Elle est utilisée pour détecter des points d'intérêt ou caractéristiques (souvent des coins ou des régions avec des variations d'intensité notables) dans une image.
@@ -135,3 +133,105 @@ out = insertMarker(frame, points(validity, :), '+');
 ### 4. **Répéter le processus pour chaque image**
 
 Le processus de suivi se répète pour chaque nouvelle image ou chaque nouveau cadre de vidéo. À chaque itération, vous lisez un nouveau cadre, suivez les points caractéristiques, et affichez ou traitez les résultats.
+
+## d)Adapter le code afin de réaliser un suivi 2D-2D des 4 coins de la boite de la figure 1, à partir de la séquence « box_video_data.avi » disponible dans le package du TD.
+
+Pour réaliser un suivi 2D-2D des 4 coins de la boîte à partir de la séquence vidéo `box_video_data.avi`, nous allons adapter le code existant. Le suivi 2D-2D implique de suivre des points spécifiques dans une séquence d'images, dans ce cas, les coins de la boîte. Voici les étapes pour adapter le code à cette tâche.
+
+### 1. **Chargement de la vidéo et initialisation**
+
+Nous commencerons par charger la vidéo et afficher la première image pour définir les coins de la boîte à suivre.
+
+### 2. **Détection des points caractéristiques (les coins de la boîte)**
+
+Nous allons détecter les coins de la boîte dans le premier cadre et les utiliser comme points de suivi.
+
+### 3. **Initialisation du suivi avec `vision.PointTracker`**
+
+Nous utiliserons la fonction `vision.PointTracker` pour suivre ces coins dans les cadres suivants de la vidéo.
+
+### Code complet pour le suivi 2D-2D des 4 coins de la boîte :
+
+```matlab
+% 1. Charger la vidéo et initialiser l'objet de suivi
+videoReader = VideoReader('box_video_data.avi'); % Charger la vidéo
+videoPlayer = vision.VideoPlayer('Position', [100, 100, 680, 520]); % Création d'un lecteur vidéo pour l'affichage
+
+% 2. Lire le premier cadre et définir la région d'intérêt
+firstFrame = readFrame(videoReader); % Lire la première image
+imshow(firstFrame); % Afficher la première image
+title('Sélectionnez les coins de la boîte dans la première image');
+
+% Sélectionner manuellement les 4 coins de la boîte à l'aide de la souris
+% Vous pouvez utiliser 'getPosition(imrect)' pour obtenir la position de l'objet manuellement
+h = imrect; % Créer un objet interactif pour sélectionner la boîte
+objectRegion = round(getPosition(h)); % Obtenir la position de la boîte sélectionnée
+close;
+
+% 3. Définir les coins de la boîte comme points à suivre
+% Les 4 coins sont les 4 points de la boîte sélectionnée
+points = [objectRegion(1), objectRegion(2); % Coin supérieur gauche
+          objectRegion(1) + objectRegion(3), objectRegion(2); % Coin supérieur droit
+          objectRegion(1), objectRegion(2) + objectRegion(4); % Coin inférieur gauche
+          objectRegion(1) + objectRegion(3), objectRegion(2) + objectRegion(4)]; % Coin inférieur droit
+
+% Convertir l'image en niveaux de gris pour détecter les points caractéristiques
+grayFirstFrame = rgb2gray(firstFrame);
+
+% Afficher les points sélectionnés sur l'image
+imshow(firstFrame);
+hold on;
+plot(points(:,1), points(:,2), 'g+'); % Afficher les points avec un marqueur '+'
+title('Coins de la boîte sélectionnés');
+
+% 4. Initialiser le tracker de points
+tracker = vision.PointTracker('MaxBidirectionalError', 1); % Créer un objet PointTracker avec un seuil d'erreur
+
+% Initialiser le tracker avec les points de la première image
+initialize(tracker, points, firstFrame); 
+
+% 5. Suivi des points à travers les frames de la vidéo
+while hasFrame(videoReader)
+    % Lire un nouveau cadre
+    frame = readFrame(videoReader); 
+  
+    % Suivre les points dans le cadre actuel
+    [trackedPoints, validity] = tracker(frame);
+  
+    % Afficher les points suivis sur l'image
+    outputFrame = insertMarker(frame, trackedPoints(validity, :), '+'); % Insérer des marqueurs pour les points suivis
+    videoPlayer(outputFrame); % Afficher le cadre avec les points suivis
+  
+    % Mettre à jour les points pour le suivi dans les prochains cadres
+    trackedPoints(validity, :) = trackedPoints(validity, :);
+end
+
+% Libérer les ressources du lecteur vidéo
+release(videoPlayer);
+```
+
+### Explication du Code
+
+#### 1. **Chargement et affichage de la vidéo**
+
+Nous chargeons la vidéo `box_video_data.avi` à l'aide de la fonction `VideoReader`. Le lecteur vidéo `vision.VideoPlayer` est utilisé pour afficher les cadres avec les points suivis.
+
+#### 2. **Sélection des coins de la boîte**
+
+Nous utilisons l'outil `imrect` pour permettre à l'utilisateur de sélectionner une région rectangulaire (la boîte) dans la première image. Les coordonnées de la boîte sont récupérées et les coins de cette boîte sont utilisés comme points de suivi.
+
+#### 3. **Initialisation du `PointTracker`**
+
+Nous initialisons l'objet `vision.PointTracker` avec les 4 coins sélectionnés comme points à suivre. Ces points sont suivis dans les cadres suivants de la vidéo.
+
+#### 4. **Suivi des points dans les cadres suivants**
+
+Dans une boucle, nous lisons chaque nouveau cadre de la vidéo et utilisons le tracker pour suivre les points sélectionnés. Les points suivis sont ensuite affichés sur chaque image avec des marqueurs "+" via la fonction `insertMarker`.
+
+#### 5. **Affichage et suivi**
+
+À chaque itération, les nouveaux points suivis sont insérés dans l'image et affichés. Les points sont ensuite mis à jour pour le suivi des cadres suivants.
+
+### Conclusion
+
+Ce code permet de réaliser un suivi 2D-2D des 4 coins de la boîte dans la séquence vidéo `box_video_data.avi`. Vous pouvez utiliser ce suivi pour des applications de vision par ordinateur comme l'alignement d'objets, le suivi de mouvements ou la reconstruction 3D.
