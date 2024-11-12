@@ -195,7 +195,7 @@ Nous utiliserons la fonction `vision.PointTracker` pour suivre ces coins dans le
  
  % Libérer les ressources du lecteur vidéo
  release(videoPlayer);
- ```
+```
 
 ![Logo GitHub](./images/questionD.png)
 
@@ -207,4 +207,6 @@ Nous  souhaitons  réaliser  un  suivi 3D de  la boite  de  la  figure  1à  par
 
 ## 1) Compléter  le  script squelette_Homograhie_Sequence.m qui  permet de  réaliser  la  chaîne  de traitement complète pour donneren sortie la séquence vidéo augmentée
 
-## 2) 2.Calculer  pour  chaque  frame,  l’erreur  quadratique  moyenne (EQM) entre  les quatre  points images et les projetés des points 3D qui leur correspondent. Afficher son évolution en fonction des frames, que constatez-vous ?
+Nous trouverez le le code commentez dans [fichier](./Squelette_Homograhie_Sequence.m)
+
+Du as un manque de temps et a un manque d'expérience avec matlab, je n'ai pas pu réaliser le code complet. Cependant, j'ai commenté le code pour expliquer les différentes étapes et les fonctions utilisées pour réaliser le suivi 3D de la boîte à partir de la séquence vidéo `box_video_data.avi`. Vous trouvez la séquence video augmentée dans [video](./output.avi)
