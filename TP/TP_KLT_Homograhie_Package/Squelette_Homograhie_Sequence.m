@@ -33,6 +33,7 @@ videoPlayer = vision.VideoPlayer('Position', [100, 100, 680, 520]);
 
 % Créer un objet VideoWriter pour enregistrer la vidéo augmentée
 outputVideo = VideoWriter('output.avi');
+
 open(outputVideo);
 
 %--------------------------------------------------------------
