@@ -17,8 +17,9 @@ p2d_im01 = [1376,1020; 2239,1066; 2310,1114; 1347,1133; 0,0; 0,0; 2278,1589; 137
 [worldOrientation, worldLocation] = estimateWorldCameraPose(p2d_im01, p3d, cameraParams, 'MaxReprojectionError', 2);
 
 % Affichage des points 3D et de la position estimée de la caméra
-figure;
 pcshow(p3d, 'VerticalAxis', 'y', 'VerticalAxisDir', 'down', 'MarkerSize', 30);
+
+
 hold on;
 plotCamera('Size', 0.05, 'Orientation', worldOrientation, 'Location', worldLocation);
 title('Points du Modèle 3D et Pose Estimée de la Caméra');
