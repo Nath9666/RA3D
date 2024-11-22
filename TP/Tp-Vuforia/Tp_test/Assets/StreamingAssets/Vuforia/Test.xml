@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="TailleTest" size="0.070000 0.091984" />
+    <ImageTarget name="testcarte" size="0.100000 0.131406" />
+  </Tracking>
+</QCARConfig>
