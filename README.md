@@ -11,3 +11,8 @@
 [planets](https://assetstore.unity.com/packages/3d/environments/planets-of-the-solar-system-3d-90219)
 [Telescope](https://www.turbosquid.com/3d-models/decoration-telescope-1984829)
 [Drone](https://assetstore.unity.com/packages/3d/vehicles/air/simple-drone-190684)
+
+## Description
+
+[Manuel d'utilisation](https://efrei365net-my.sharepoint.com/:w:/g/personal/laura_saada_efrei_net/EcTVCvyPZkBMkLdowUWwjMcBpzNqAZ5lqR-_qFWSHMhmBA?e=GRiqFO)
+[Rapport planetARium](https://efrei365net-my.sharepoint.com/:w:/g/personal/laura_saada_efrei_net/ETtLkRppC11MnUvgIUty2N4BqbKb3sDzC_gbbpS46z_3Xw?e=hqLxze)
