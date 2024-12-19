@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: VuforiaConfiguration
   m_EditorClassIdentifier: 
   vuforia:
-    vuforiaLicenseKey: 
+    vuforiaLicenseKey: AQeNW0z/////AAABmWLVq/d3NUP3rg8LDHTiYdpZjcz4ZjjC2iZhK02/xONs37CdyfIsiEI10VECluMmdBSTu/S4ggBG8BU8FwDnu9PoGGkxmsvibVBUYw9wYDvsQIXvxwWgR57dlkWEPz6YUWajECyG9+dIcpNf3NXsyaJ6n/3/LMD3DAv7WnRsokmGn+Q00cGz6wR9VwSn3MHv6T35+CRlL2FLwxmoXwWS64GG8KCXi+H1xyk3UuSoXj1BfyiC4VOlRLr1Q2R3hlgFcI0R+QkEw8EOi0nQIyQdMwcaGKzV+QQkBZRM033KhJqEwEXfh+KhMl3hxMKZpgCUNtGRiwM9vN4J6ilMrEUdoY9SOvqlBEWRcCxHn3kAPk6B
     ufoLicenseKey: QVM0dUVmYi8vLy8vQUFBQUtGU0tCL1crSEVPZW9RSHlSZ3loL2FWaHZKSXJkZTNGL0hqYjVqUm5UUUlEaGtPY1E5Njk1N09lYytZSFp1S1VhRDVJRnA0c3l3T2JDZmJ0QkYyZkdlZ0hKOTg4bWJEVm13cVBucTI4eTlQYU9adENmMzJOOEl3dmF2bnB5d2NwK0N2R2lkaDVua2xaL3hURUFxN3A3Z1lLU1hBU1FXOXRJdFM5V3lNdmdhMGEyZVhYd0NSM1dWMzVLSHFXTjJRWUgzSXhWLzB5RUNZZ1MvaWJQcUhaYmlqRk1QZXFYK2pzOXhySEZENHdSNnpXVkc1QnU5NWdabW1KZ0JkVm5ubGtGYi9JM0JZMFdGQkhDNHk0bXhvb0Fvdld2NXFldFhzL0REcHJZSjNqbk13eUxUQldOajZOZ1VaVXJxMVRRWWdFb1dURlRQdzhYek5YYlBHcE11R2pLNlk4VG1SUUNpb2FkbllYbzVRdHB5YnI=
     delayedInitialization: 0
     cameraFocusModeSetting: 2
@@ -23,7 +23,7 @@ MonoBehaviour:
     modelTargetRecoWhileExtendedTracked: 1
     shareRecordingsInITunes: 0
     logLevel: 0
-    version: 10.27.3
+    version: 10.28.4
     eulaAcceptedVersions: '{"Values":["10.27","10.28"]}'
   database:
     disableModelExtraction: 0
@@ -32,14 +32,14 @@ MonoBehaviour:
     outlineShader: {fileID: 4800000, guid: 88d3b6b5cf364476ca39fcec255331b1, type: 3}
     unlitTransparentShader: {fileID: 10750, guid: 0000000000000000f000000000000000, type: 0}
   runtimeResources:
-    register: {fileID: 0}
+    register: {fileID: 11400000, guid: caeba6ecda451416c803389918ddea4a, type: 2}
   videoBackground:
     numDivisions: 2
     videoBackgroundShader: {fileID: 4800000, guid: 144dfca22ac584ade9e538e24a5ddded, type: 3}
     unlitShader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
     videoBackgroundEnabled: 1
   deviceTracker:
-    autoStartTracker: 1
+    autoStartTracker: 0
     arcoreRequirement: 1
     autoImportArcore: 1
     thirdPartyARCoreClientDetected: 0

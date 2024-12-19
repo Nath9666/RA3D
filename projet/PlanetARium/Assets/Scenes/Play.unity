@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -133,7 +134,7 @@ GameObject:
   - component: {fileID: 148513629}
   - component: {fileID: 148513628}
   - component: {fileID: 148513627}
-  - component: {fileID: 148513626}
+  - component: {fileID: 148513630}
   m_Layer: 0
   m_Name: Fusee
   m_TagString: Untagged
@@ -141,25 +142,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &148513626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148513625}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 148513628}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: FUSEE
-  mDatasetName: Vuforia/Database_Reality.xml
-  mCastedBehaviour: {fileID: 148513628}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &148513627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,7 +212,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 148513626}
+  mPreview: {fileID: 148513630}
 --- !u!4 &148513629
 Transform:
   m_ObjectHideFlags: 0
@@ -247,6 +229,25 @@ Transform:
   - {fileID: 416791100}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &148513630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148513625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 148513628}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: FUSEE
+  mDatasetName: Vuforia/Database_Reality.xml
+  mCastedBehaviour: {fileID: 148513628}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1001 &259137414
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -612,7 +613,7 @@ GameObject:
   - component: {fileID: 561311882}
   - component: {fileID: 561311881}
   - component: {fileID: 561311880}
-  - component: {fileID: 561311879}
+  - component: {fileID: 561311883}
   m_Layer: 0
   m_Name: Drone
   m_TagString: Untagged
@@ -620,25 +621,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &561311879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 561311878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 561311881}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: DRONE
-  mDatasetName: Vuforia/Database_Reality.xml
-  mCastedBehaviour: {fileID: 561311881}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &561311880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -709,7 +691,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 561311879}
+  mPreview: {fileID: 561311883}
 --- !u!4 &561311882
 Transform:
   m_ObjectHideFlags: 0
@@ -726,6 +708,25 @@ Transform:
   - {fileID: 1850472879}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &561311883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561311878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 561311881}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: DRONE
+  mDatasetName: Vuforia/Database_Reality.xml
+  mCastedBehaviour: {fileID: 561311881}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1001 &632727557
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -987,7 +988,7 @@ GameObject:
   - component: {fileID: 712810807}
   - component: {fileID: 712810806}
   - component: {fileID: 712810805}
-  - component: {fileID: 712810804}
+  - component: {fileID: 712810808}
   m_Layer: 0
   m_Name: Terre
   m_TagString: Untagged
@@ -995,25 +996,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &712810804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 712810803}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 712810806}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: TERRE
-  mDatasetName: Vuforia/Database_Reality.xml
-  mCastedBehaviour: {fileID: 712810806}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &712810805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1076,15 +1058,15 @@ MonoBehaviour:
   mTrackableName: TERRE
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/Database_Reality.xml
-  mAspectRatio: 1.7550572
+  mAspectRatio: 1.7023429
   mImageTargetType: 0
   mWidth: 0.07
-  mHeight: 0.12285401
+  mHeight: 0.119164005
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 712810804}
+  mPreview: {fileID: 712810808}
 --- !u!4 &712810807
 Transform:
   m_ObjectHideFlags: 0
@@ -1101,6 +1083,25 @@ Transform:
   - {fileID: 984026873}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &712810808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712810803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 712810806}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: TERRE
+  mDatasetName: Vuforia/Database_Reality.xml
+  mCastedBehaviour: {fileID: 712810806}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &722518572
 GameObject:
   m_ObjectHideFlags: 0
@@ -1132,112 +1133,75 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &822189344
-GameObject:
+--- !u!1001 &728083141
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 822189348}
-  - component: {fileID: 822189347}
-  - component: {fileID: 822189346}
-  - component: {fileID: 822189345}
-  m_Layer: 0
-  m_Name: Plane
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!64 &822189345
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 822189344}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &822189346
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 822189344}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &822189347
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 822189344}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &822189348
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 822189344}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 2, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 833363175}
+    m_Modifications:
+    - target: {fileID: 1066320961419670, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
+      propertyPath: m_Name
+      value: Sun Sphere
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
 --- !u!1 &833363171
 GameObject:
   m_ObjectHideFlags: 0
@@ -1249,7 +1213,7 @@ GameObject:
   - component: {fileID: 833363175}
   - component: {fileID: 833363174}
   - component: {fileID: 833363173}
-  - component: {fileID: 833363172}
+  - component: {fileID: 833363176}
   m_Layer: 0
   m_Name: Soleil
   m_TagString: Untagged
@@ -1257,25 +1221,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &833363172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 833363171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 833363174}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: SOLEIL
-  mDatasetName: Vuforia/Database_Reality.xml
-  mCastedBehaviour: {fileID: 833363174}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &833363173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1346,7 +1291,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 833363172}
+  mPreview: {fileID: 833363176}
 --- !u!4 &833363175
 Transform:
   m_ObjectHideFlags: 0
@@ -1360,87 +1305,28 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 867847986}
+  - {fileID: 2109675888}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &867847985
-PrefabInstance:
+--- !u!114 &833363176
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 833363175}
-    m_Modifications:
-    - target: {fileID: 1066320961419670, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
-      propertyPath: m_Name
-      value: Sun Sphere
-      objectReference: {fileID: 0}
-    - target: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
---- !u!4 &867847986 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
-  m_PrefabInstance: {fileID: 867847985}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833363171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 833363174}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: SOLEIL
+  mDatasetName: Vuforia/Database_Reality.xml
+  mCastedBehaviour: {fileID: 833363174}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1001 &871340693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1530,7 +1416,7 @@ GameObject:
   - component: {fileID: 969008797}
   - component: {fileID: 969008796}
   - component: {fileID: 969008795}
-  - component: {fileID: 969008794}
+  - component: {fileID: 969008798}
   m_Layer: 0
   m_Name: Mars
   m_TagString: Untagged
@@ -1538,25 +1424,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &969008794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 969008793}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 969008796}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: MARS
-  mDatasetName: Vuforia/Database_Reality.xml
-  mCastedBehaviour: {fileID: 969008796}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &969008795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1627,7 +1494,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 969008794}
+  mPreview: {fileID: 969008798}
 --- !u!4 &969008797
 Transform:
   m_ObjectHideFlags: 0
@@ -1644,6 +1511,25 @@ Transform:
   - {fileID: 463695568}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &969008798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969008793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 969008796}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: MARS
+  mDatasetName: Vuforia/Database_Reality.xml
+  mCastedBehaviour: {fileID: 969008796}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &974333600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1655,7 +1541,7 @@ GameObject:
   - component: {fileID: 974333604}
   - component: {fileID: 974333603}
   - component: {fileID: 974333602}
-  - component: {fileID: 974333601}
+  - component: {fileID: 974333605}
   m_Layer: 0
   m_Name: Mercure
   m_TagString: Untagged
@@ -1663,25 +1549,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &974333601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 974333600}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 974333603}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: MERCURE
-  mDatasetName: Vuforia/Database_Reality.xml
-  mCastedBehaviour: {fileID: 974333603}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &974333602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1744,15 +1611,15 @@ MonoBehaviour:
   mTrackableName: MERCURE
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/Database_Reality.xml
-  mAspectRatio: 1.7556714
+  mAspectRatio: 1.6735715
   mImageTargetType: 0
   mWidth: 0.07
-  mHeight: 0.122897
+  mHeight: 0.11715
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 974333601}
+  mPreview: {fileID: 974333605}
 --- !u!4 &974333604
 Transform:
   m_ObjectHideFlags: 0
@@ -1769,6 +1636,25 @@ Transform:
   - {fileID: 871340694}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &974333605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974333600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 974333603}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: MERCURE
+  mDatasetName: Vuforia/Database_Reality.xml
+  mCastedBehaviour: {fileID: 974333603}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1001 &984026872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1780,6 +1666,10 @@ PrefabInstance:
     - target: {fileID: 1733945558841920, guid: 300f80108a63f48618cb4a1c8b8c1e86, type: 3}
       propertyPath: m_Name
       value: Earth
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733945558841920, guid: 300f80108a63f48618cb4a1c8b8c1e86, type: 3}
+      propertyPath: m_TagString
+      value: TrackingObject
       objectReference: {fileID: 0}
     - target: {fileID: 4643521465287934, guid: 300f80108a63f48618cb4a1c8b8c1e86, type: 3}
       propertyPath: m_LocalScale.x
@@ -1841,6 +1731,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 205568318585521926, guid: 300f80108a63f48618cb4a1c8b8c1e86, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1862,7 +1756,7 @@ GameObject:
   - component: {fileID: 994826615}
   - component: {fileID: 994826614}
   - component: {fileID: 994826613}
-  - component: {fileID: 994826612}
+  - component: {fileID: 994826616}
   m_Layer: 0
   m_Name: Saturne
   m_TagString: Untagged
@@ -1870,25 +1764,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &994826612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 994826611}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 994826614}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: SATURNE
-  mDatasetName: Vuforia/Database_Reality.xml
-  mCastedBehaviour: {fileID: 994826614}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &994826613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1959,7 +1834,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 994826612}
+  mPreview: {fileID: 994826616}
 --- !u!4 &994826615
 Transform:
   m_ObjectHideFlags: 0
@@ -1976,6 +1851,25 @@ Transform:
   - {fileID: 259137415}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &994826616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994826611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 994826614}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: SATURNE
+  mDatasetName: Vuforia/Database_Reality.xml
+  mCastedBehaviour: {fileID: 994826614}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1001 &1053102415
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2221,7 +2115,7 @@ GameObject:
   - component: {fileID: 1310838510}
   - component: {fileID: 1310838509}
   - component: {fileID: 1310838508}
-  - component: {fileID: 1310838507}
+  - component: {fileID: 1310838511}
   m_Layer: 0
   m_Name: Telescope
   m_TagString: Untagged
@@ -2229,25 +2123,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1310838507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1310838506}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 1310838509}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: TELESCOPE
-  mDatasetName: Vuforia/Database_Reality.xml
-  mCastedBehaviour: {fileID: 1310838509}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &1310838508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2318,7 +2193,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1310838507}
+  mPreview: {fileID: 1310838511}
 --- !u!4 &1310838510
 Transform:
   m_ObjectHideFlags: 0
@@ -2335,6 +2210,25 @@ Transform:
   - {fileID: 1152764512}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1310838511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310838506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1310838509}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: TELESCOPE
+  mDatasetName: Vuforia/Database_Reality.xml
+  mCastedBehaviour: {fileID: 1310838509}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &1335453006
 GameObject:
   m_ObjectHideFlags: 0
@@ -2346,7 +2240,7 @@ GameObject:
   - component: {fileID: 1335453010}
   - component: {fileID: 1335453009}
   - component: {fileID: 1335453008}
-  - component: {fileID: 1335453007}
+  - component: {fileID: 1335453011}
   m_Layer: 0
   m_Name: Venus
   m_TagString: Untagged
@@ -2354,25 +2248,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1335453007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1335453006}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 1335453009}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: VENUS
-  mDatasetName: Vuforia/Database_Reality.xml
-  mCastedBehaviour: {fileID: 1335453009}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &1335453008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2435,15 +2310,15 @@ MonoBehaviour:
   mTrackableName: VENUS
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/Database_Reality.xml
-  mAspectRatio: 1.74
+  mAspectRatio: 1.7023429
   mImageTargetType: 0
   mWidth: 0.07
-  mHeight: 0.1218
+  mHeight: 0.119164005
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1335453007}
+  mPreview: {fileID: 1335453011}
 --- !u!4 &1335453010
 Transform:
   m_ObjectHideFlags: 0
@@ -2460,6 +2335,25 @@ Transform:
   - {fileID: 632727558}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1335453011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335453006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1335453009}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: VENUS
+  mDatasetName: Vuforia/Database_Reality.xml
+  mCastedBehaviour: {fileID: 1335453009}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &1450288956
 GameObject:
   m_ObjectHideFlags: 0
@@ -2471,7 +2365,7 @@ GameObject:
   - component: {fileID: 1450288960}
   - component: {fileID: 1450288959}
   - component: {fileID: 1450288958}
-  - component: {fileID: 1450288957}
+  - component: {fileID: 1450288961}
   m_Layer: 0
   m_Name: Neptune
   m_TagString: Untagged
@@ -2479,25 +2373,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1450288957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1450288956}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 1450288959}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: NEPTUNE
-  mDatasetName: Vuforia/Database_Reality.xml
-  mCastedBehaviour: {fileID: 1450288959}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &1450288958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2568,7 +2443,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1450288957}
+  mPreview: {fileID: 1450288961}
 --- !u!4 &1450288960
 Transform:
   m_ObjectHideFlags: 0
@@ -2585,6 +2460,25 @@ Transform:
   - {fileID: 1088201700}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1450288961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450288956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1450288959}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: NEPTUNE
+  mDatasetName: Vuforia/Database_Reality.xml
+  mCastedBehaviour: {fileID: 1450288959}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &1649604008
 GameObject:
   m_ObjectHideFlags: 0
@@ -2596,7 +2490,7 @@ GameObject:
   - component: {fileID: 1649604012}
   - component: {fileID: 1649604011}
   - component: {fileID: 1649604010}
-  - component: {fileID: 1649604009}
+  - component: {fileID: 1649604013}
   m_Layer: 0
   m_Name: Jupiter
   m_TagString: Untagged
@@ -2604,25 +2498,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1649604009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1649604008}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 1649604011}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: JUPITER
-  mDatasetName: Vuforia/Database_Reality.xml
-  mCastedBehaviour: {fileID: 1649604011}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &1649604010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2693,7 +2568,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1649604009}
+  mPreview: {fileID: 1649604013}
 --- !u!4 &1649604012
 Transform:
   m_ObjectHideFlags: 0
@@ -2710,6 +2585,25 @@ Transform:
   - {fileID: 1053102416}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1649604013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649604008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1649604011}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: JUPITER
+  mDatasetName: Vuforia/Database_Reality.xml
+  mCastedBehaviour: {fileID: 1649604011}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1001 &1850472878
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2788,6 +2682,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 77ec979c4a1053f4fb90fee3d17b240c, type: 3}
   m_PrefabInstance: {fileID: 1850472878}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1864410459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1864410460}
+  - component: {fileID: 1864410461}
+  m_Layer: 0
+  m_Name: InteractionManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1864410460
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864410459}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1864410461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864410459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38d0aca8025fa0b449eb72d8e8b9ac98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sun: {fileID: 833363171}
+  planet: {fileID: 712810803}
+  orbitSpeed: 10
 --- !u!1 &1995767822
 GameObject:
   m_ObjectHideFlags: 0
@@ -2830,7 +2771,7 @@ GameObject:
   - component: {fileID: 2078084736}
   - component: {fileID: 2078084735}
   - component: {fileID: 2078084734}
-  - component: {fileID: 2078084733}
+  - component: {fileID: 2078084737}
   m_Layer: 0
   m_Name: Uranus
   m_TagString: Untagged
@@ -2838,25 +2779,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2078084733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2078084732}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 2078084735}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: URANUS
-  mDatasetName: Vuforia/Database_Reality.xml
-  mCastedBehaviour: {fileID: 2078084735}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &2078084734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2919,15 +2841,15 @@ MonoBehaviour:
   mTrackableName: URANUS
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/Database_Reality.xml
-  mAspectRatio: 1.753143
+  mAspectRatio: 1.7289429
   mImageTargetType: 0
   mWidth: 0.07
-  mHeight: 0.12272001
+  mHeight: 0.121026
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 2078084733}
+  mPreview: {fileID: 2078084737}
 --- !u!4 &2078084736
 Transform:
   m_ObjectHideFlags: 0
@@ -2944,13 +2866,36 @@ Transform:
   - {fileID: 709983894}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2078084737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078084732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 2078084735}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: URANUS
+  mDatasetName: Vuforia/Database_Reality.xml
+  mCastedBehaviour: {fileID: 2078084735}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
+--- !u!4 &2109675888 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4538169596089768, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
+  m_PrefabInstance: {fileID: 728083141}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 329934041}
   - {fileID: 705507995}
-  - {fileID: 822189348}
   - {fileID: 833363175}
   - {fileID: 974333604}
   - {fileID: 1335453010}
@@ -2965,3 +2910,4 @@ SceneRoots:
   - {fileID: 1310838510}
   - {fileID: 722518573}
   - {fileID: 1995767823}
+  - {fileID: 1864410460}
